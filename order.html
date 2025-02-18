@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="inaccessible.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Confirm Order</title>
+</head>
+<body class="order-page">
+    <div class = "navbar">
+        <div class = "left">
+            <a href = "./index.html"><img src = "./logo.svg"/></a>
+            <a href = "./index.html"><div>FoodDeliveryOnline</div></a>
+        </div>
+        <div class = "right">
+            <div>About Us</div>
+            <a href = "./contact.html">Contact</a>
+            <a href = "./signup.html">Sign Up</a>
+        </div>
+    </div>
+
+    <div class = "heading">Confirm Your Order</div>
+    <div class="order-body">
+        <div class="order-details">
+            <div class="address">221B Baker Street, Marylebone, London, W1U 3BS, England.</div>
+            <div class = "button" onclick = "paymentAlert()">Pay Now</div>
+        </div>
+        <div class="order-image">
+            <img src="" id="orderImage" />
+        </div>
+    </div>
+
+    <div class = "footer">
+        <p>&copy; 2025 Food Delivery Online. All rights reserved.</p>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#"><img src="./icons/facebook_icon.png"></a>
+            <a href="#"><img src="./icons/instagram_icon.png"></a>
+            <a href="#"><img src="./icons/twitter_icon.png"></a>
+        </div>
+    </div>
+<script>
+    window.onload = () => {
+        const params = new URLSearchParams(window.location.search);
+        const foodName = params.get('food');
+        const orderTime = params.get('time');
+        const imageName = params.get('image');
+
+        const orderDetails = document.querySelector(".order-details");
+        const addressElement = document.querySelector(".address");
+
+        if (foodName && orderTime) {
+            const orderInfo = document.createElement("div");
+            orderInfo.innerHTML = `
+            <p>You have ordered: <strong>${foodName}</strong></p>
+            <p>Estimated delivery time: <strong>${orderTime}</strong></p>
+        `;
+            orderDetails.insertBefore(orderInfo, addressElement);
+        }
+
+        if (imageName) {
+            document.getElementById("orderImage").src = `./menu_images/${imageName}`;
+        }
+    };
+
+    const paymentAlert = () => {
+        alert("You will be redirected to the payment page soon...");
+    }
+</script>
+</body>
+</html>

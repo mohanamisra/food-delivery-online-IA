@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="inaccessible.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Food Delivery Online</title>
+</head>
+<body>
+    <div class = "navbar">
+        <div class = "left">
+            <a href = "./index.html"><img src = "../logo.svg"/></a>
+            <a href = "./index.html"><div>FoodDeliveryOnline</div></a>
+        </div>
+        <div class = "right">
+            <div>About Us</div>
+            <a href = "./contact.html">Contact</a>
+            <a href = "./signup.html">Sign Up</a>
+        </div>
+    </div>
+    <div class = "hero">
+        <div class="hero-text">
+            <div class = "hero-heading">Food Delivery Online</div>
+            <div class = "hero-body">Enjoy gourmet delicacies in the comfort of your home.
+                <br/>Five-star food, zero-star effort!<br/>
+                Browse our menu <a href="#menu">here</a></div>
+        </div>
+        <img class = "hero-image" src="./heroimage.jpg"/>
+    </div>
+
+    <div class = "line"></div>
+
+    <div class = "menu-heading">Our Menu</div>
+    <div class = "menu" id = "menu">
+        <div class = "menu-card">
+            <img src="./menu_images/pizza.jpg"/>
+            <div class = "card-text">
+                <p class = "title">Good Pizza</p>
+                <p class = "delivery-time">50-66 mins</p>
+                <p class = "description">Really good pizza delivered right to your home</p>
+            </div>
+            <div class="button" onclick="goToConfirmPage('Good Pizza', '50-66 mins', 'pizza.jpg')">Order Now</div>
+        </div>
+
+        <div class = "menu-card">
+            <img src="./menu_images/burger.jpg"/>
+            <div class = "card-text">
+                <p class = "title">Juicy Burger</p>
+                <p class = "delivery-time">30-45 mins</p>
+                <p class = "description">Delicious and juicy burger</p>
+            </div>
+            <div class="button" onclick="goToConfirmPage('Juicy Burger', '30-45 mins', 'burger.jpg')">Order Now</div>
+        </div>
+
+        <div class = "menu-card">
+            <img src="./menu_images/pasta.jpg"/>
+            <div class = "card-text">
+                <p class = "title">Creamy Pasta</p>
+                <p class = "delivery-time">40-55 mins</p>
+                <p class = "description">Authentic creamy pasta</p>
+            </div>
+            <div class="button" onclick="goToConfirmPage('Creamy Pasta', '40-55 mins', 'pasta.jpg')">Order Now</div>
+        </div>
+
+        <div class = "menu-card">
+            <img src="./menu_images/salad.jpg"/>
+            <div class = "card-text">
+                <p class = "title">Fresh Salad</p>
+                <p class = "delivery-time">25-40 mins</p>
+                <p class = "description">Healthy and refreshing salad</p>
+            </div>
+            <div class="button" onclick="goToConfirmPage('Fresh Salad', '25-40 mins', 'salad.jpg')">Order Now</div>
+        </div>
+
+        <div class = "menu-card">
+            <img src="./menu_images/sushi.jpg"/>
+            <div class = "card-text">
+                <p class = "title">Sushi Platter</p>
+                <p class = "delivery-time">35-50 mins</p>
+                <p class = "description">Fresh and delicious sushi</p>
+            </div>
+            <div class="button" onclick="goToConfirmPage('Sushi Platter', '35-50 mins', 'sushi.jpg')">Order Now</div>
+        </div>
+
+        <div class = "menu-card">
+            <img src="./menu_images/tacos.jpg"/>
+            <div class = "card-text">
+                <p class = "title">Spicy Tacos</p>
+                <p class = "delivery-time">20-35 mins</p>
+                <p class = "description">Flavorful and spicy tacos</p>
+            </div>
+            <div class="button" onclick="goToConfirmPage('Spicy Tacos', '20-35 mins', 'tacos.jpg')">Order Now</div>
+        </div>
+
+        <div class = "menu-card">
+            <img src="./menu_images/noodles.jpg"/>
+            <div class = "card-text">
+                <p class = "title">Noodle Bowl</p>
+                <p class = "delivery-time">45-60 mins</p>
+                <p class = "description">Warm and comforting noodles</p>
+            </div>
+            <div class="button" onclick="goToConfirmPage('Noodle Bowl', '45-60 mins', 'noodles.jpg')">Order Now</div>
+        </div>
+
+        <div class = "menu-card">
+            <img src="./menu_images/sandwich.jpg"/>
+            <div class = "card-text">
+                <p class = "title">Club Sandwich</p>
+                <p class = "delivery-time">30-45 mins</p>
+                <p class = "description">Classic and satisfying sandwich</p>
+            </div>
+            <div class="button" onclick="goToConfirmPage('Club Sandwich', '30-45 mins', 'sandwich.jpg')">Order Now</div>
+        </div>
+
+        <div class = "menu-card">
+            <img src="./menu_images/icecream.jpg"/>
+            <div class = "card-text">
+                <p class = "title">Ice Cream Sundae</p>
+                <p class = "delivery-time">15-25 mins</p>
+                <p class = "description">Delicious and refreshing ice cream</p>
+            </div>
+            <div class="button" onclick="goToConfirmPage('Ice Cream Sundae', '15-25 mins', 'icecream.jpg')">Order Now</div>
+        </div>
+
+        <div class = "menu-card">
+            <img src="./menu_images/burrito.jpg"/>
+            <div class = "card-text">
+                <p class = "title">Chicken Burrito</p>
+                <p class = "delivery-time">25-40 mins</p>
+                <p class = "description">Hearty and flavorful burrito</p>
+            </div>
+            <div class="button" onclick="goToConfirmPage('Chicken Burrito', '25-40 mins', 'burrito.jpg')">Order Now</div>
+        </div>
+    </div>
+    <div class = "footer">
+        <p>&copy; 2025 Food Delivery Online. All rights reserved.</p>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#"><img src="./icons/facebook_icon.png"></a>
+            <a href="#"><img src="./icons/instagram_icon.png"></a>
+            <a href="#"><img src="./icons/twitter_icon.png"></a>
+        </div>
+    </div>
+    <script src="inaccessible.js"></script>
+</body>
+</html>
